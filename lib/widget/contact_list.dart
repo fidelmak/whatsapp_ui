@@ -9,52 +9,50 @@ class ContactList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: Padding(
-          padding: const EdgeInsets.only(top: 10.0),
-          child: Column(
-            children: [
-              Expanded(
-                child: ListView.builder(
-                    shrinkWrap: true,
-                    itemCount: info.length,
-                    itemBuilder: (context, index) {
-                      return InkWell(
-                        onTap: () {},
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: ListTile(
-                            title: Text(
-                              info[index]['name'].toString(),
-                              style: TextStyle(fontSize: 15),
-                            ),
-                            subtitle: Padding(
-                              padding: EdgeInsets.only(top: 6),
-                              child: Text(
-                                info[index]['message'].toString(),
-                                style: TextStyle(fontSize: 15),
-                              ),
-                            ),
-                            leading: CircleAvatar(
-                              radius: 30,
-                              backgroundImage: NetworkImage(
-                                info[index]['profilePic'].toString(),
-                              ),
-                            ),
-                            trailing: Text(
-                              info[index]['time'].toString(),
-                              style:
-                                  TextStyle(fontSize: 15, color: Colors.grey),
-                            ),
+        padding: const EdgeInsets.only(top: 10.0),
+        child: ListView.builder(
+            shrinkWrap: true,
+            itemCount: info.length,
+            itemBuilder: (context, index) {
+              return Column(
+                children: [
+                  InkWell(
+                    onTap: () {},
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: ListTile(
+                        title: Text(
+                          info[index]['name'].toString(),
+                          style: TextStyle(fontSize: 15),
+                        ),
+                        subtitle: Padding(
+                          padding: EdgeInsets.only(top: 6),
+                          child: Text(
+                            info[index]['message'].toString(),
+                            style: TextStyle(fontSize: 15),
                           ),
                         ),
-                      );
-                    }),
-              ),
-              const Divider(
-                color: dividerColor,
-                indent: 64,
-              )
-            ],
-          )),
+                        leading: CircleAvatar(
+                          radius: 30,
+                          backgroundImage: NetworkImage(
+                            info[index]['profilePic'].toString(),
+                          ),
+                        ),
+                        trailing: Text(
+                          info[index]['time'].toString(),
+                          style: TextStyle(fontSize: 15, color: Colors.grey),
+                        ),
+                      ),
+                    ),
+                  ),
+                  const Divider(
+                    color: dividerColor,
+                    indent: 64,
+                  )
+                ],
+              );
+            }),
+      ),
     );
   }
 }

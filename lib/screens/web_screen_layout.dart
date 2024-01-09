@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp_ui/widget/contact_list.dart';
 
+import '../widget/web_profile_bar.dart';
+
 class WebScreenLayout extends StatelessWidget {
   const WebScreenLayout({super.key});
 
@@ -11,10 +13,13 @@ class WebScreenLayout extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Expanded(
-            child: const Column(
-              children: [
-                ContactList(),
-              ],
+            child: SingleChildScrollView(
+              child: const Column(
+                children: [
+                  Webprofilebar(),
+                  ContactList(),
+                ],
+              ),
             ),
           ),
           Container(
