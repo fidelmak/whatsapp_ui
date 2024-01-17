@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp_ui/widget/contact_list.dart';
+import 'package:whatsapp_ui/widget/web_search_bar.dart';
 
 import '../widget/web_profile_bar.dart';
 
@@ -18,12 +19,14 @@ class WebScreenLayout extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   Webprofilebar(),
+                  WebSearch(),
                   ContactList(),
                 ],
               ),
             ),
           ),
           Container(
+            child: Center(child: Text("Chats are here ")),
             width: MediaQuery.of(context).size.width * 0.75,
             decoration: BoxDecoration(
               image: DecorationImage(
