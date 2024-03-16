@@ -20,6 +20,10 @@ class WebSearch extends StatelessWidget {
           fillColor: searchBarColor,
           prefixIcon:
               const Padding(padding: EdgeInsets.symmetric(horizontal: 20)),
+          icon: Icon(
+            Icons.search,
+            size: 20,
+          ),
           hintStyle: TextStyle(fontSize: 10),
           hintText: "Search on Start Chat ",
           border: OutlineInputBorder(
@@ -27,6 +31,7 @@ class WebSearch extends StatelessWidget {
               borderSide: BorderSide(
                 width: 0,
               )),
+          contentPadding: EdgeInsets.all(10),
         ),
       ),
     );
