@@ -7,7 +7,7 @@ class Webprofilebar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height * 0.077,
+      height: MediaQuery.of(context).size.height * 0.087,
       width: MediaQuery.of(context).size.width * 0.25,
       padding: EdgeInsets.all(10),
       decoration: BoxDecoration(
@@ -23,7 +23,7 @@ class Webprofilebar extends StatelessWidget {
           const CircleAvatar(
             radius: 20,
             backgroundImage: NetworkImage(
-                'https://images.unsplash.com/photo-1619194617062-5a61b9c6a049?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHJhbmRvbSUyMHBlb3BsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=900&q=60'),
+                'https://upload.wikimedia.org/wikipedia/commons/8/85/Elon_Musk_Royal_Society_%28crop1%29.jpg'),
           ),
           Row(
             children: [

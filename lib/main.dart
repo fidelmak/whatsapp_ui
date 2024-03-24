@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'colors.dart';
 import 'responsive/responsive.dart';
 import 'screens/mobile_screen_layout.dart';
+import 'screens/quick.dart';
 import 'screens/web_screen_layout.dart';
 
 void main() {
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
             appBarTheme: const AppBarTheme(
               color: appBarColor,
             )),
-        home: Responsive(
+        home: const Responsive(
           mobileScreenLayout: MobileScreenLayout(),
           webScreenLayout: WebScreenLayout(),
         ));
