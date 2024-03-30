@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp_ui/info.dart';
 
+import 'Sender_message.dart';
+import 'my_messages.dart';
+
 class Chat_list extends StatefulWidget {
   const Chat_list({super.key});
 
@@ -15,8 +18,15 @@ class _chat_listState extends State<Chat_list> {
         itemCount: messages.length,
         itemBuilder: (context, index) {
           if (messages[index]["isMe"] == true) {
-            // the messages goes
+            return MyMessageCard(
+              message: messages[index]['text'].toString(),
+              date: messages[index]['time'].toString(),
+            );
           }
+          return SenderMessage(
+            message: messages[index]['text'].toString(),
+            date: messages[index]['time'].toString(),
+          );
         });
   }
 }

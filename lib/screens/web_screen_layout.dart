@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:whatsapp_ui/widget/contact_list.dart';
 import 'package:whatsapp_ui/widget/web_search_bar.dart';
 
+import '../widget/chat_list.dart';
 import '../widget/web_chat_appbar.dart';
 import '../widget/web_profile_bar.dart';
 
@@ -36,6 +37,7 @@ class WebScreenLayout extends StatelessWidget {
             child: Column(
               children: [
                 Chatbar(),
+                Expanded(child: Chat_list()),
               ],
             ),
           ),

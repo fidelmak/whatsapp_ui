@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:whatsapp_ui/colors.dart';
 import 'package:whatsapp_ui/info.dart';
 
-class MyMessageCard extends StatelessWidget {
+class SenderMessage extends StatelessWidget {
   final String message;
   final String date;
-  const MyMessageCard({super.key, required this.message, required this.date});
+  const SenderMessage({super.key, required this.message, required this.date});
 
   @override
   Widget build(BuildContext context) {
     return Align(
-      alignment: Alignment.centerRight,
+      alignment: Alignment.centerLeft,
       child: ConstrainedBox(
         constraints: BoxConstraints(
           maxWidth: MediaQuery.of(context).size.width - 45,
@@ -20,7 +20,7 @@ class MyMessageCard extends StatelessWidget {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(8),
           ),
-          color: messageColor,
+          color: senderMessageColor,
           margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
           child: SizedBox(
             height: 50,
@@ -35,17 +35,17 @@ class MyMessageCard extends StatelessWidget {
                   ),
                 ),
                 Positioned(
-                    top: 24,
+                    top: 22,
                     bottom: 2,
                     child: Row(
                       children: [
-                        const SizedBox(
-                          width: 50,
-                        ),
                         Text(
                           date,
                           style: TextStyle(fontSize: 11),
                         ),
+                        const SizedBox(
+                          width: 50,
+                        )
                       ],
                     ))
               ],
